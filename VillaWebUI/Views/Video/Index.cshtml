@@ -1,0 +1,32 @@
+﻿@model List<ResultVideoDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table class="table table-hover table-bordered">
+    @{
+        int count = 0;
+    };
+    <tr>
+        <th>#</th>
+        <th>Video-Link</th>
+       
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td><a href="#" target="_blank">@item.VideoUrl</a></td>
+           
+            <td>
+                <a asp-controller="Video" asp-action="DeleteVideo" asp-route-id="@item.Id" class="btn btn-outline-danger">Sil</a>
+                <a asp-controller="Video" asp-action="UpdateVideo" asp-route-id="@item.Id" class="btn btn-outline-info">Güncelle</a>
+            </td>
+        </tr>
+
+    }
+</table>
+<a asp-controller="Video" asp-action="CreateVideo" class="btn btn-outline-danger">Yeni Video Ekle</a>
+

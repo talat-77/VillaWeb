@@ -1,0 +1,48 @@
+﻿@model ResultProductDto
+@{
+    ViewData["Title"] = "DetailProduct";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<table class="table table-striped">
+    <tr>
+        <th>Fotoğraf</th>
+        <td>@Model.ImageUrl</td>
+    </tr>
+       <tr>
+        <th>Başlık</th>
+        <td>@Model.Title</td>
+    </tr>
+    <tr>
+        <th>Kategori</th>
+        <td>@Model.Category</td>
+    </tr>
+       <tr>
+        <th>Fiyat</th>
+        <td>@Model.Price</td>
+    </tr>
+    <tr>
+        <th>Oda-Sayısı</th>
+        <td>@Model.BathroomCount</td>
+    </tr>
+    <tr>
+        <th>Bnayo-Sayısı</th>
+        <td>@Model.BedroomCount</td>
+    </tr>
+    <tr>
+        <th>Alan</th>
+        <td>@Model.Area</td>
+    </tr>
+    <tr>
+        <th>Zemin</th>
+        <td>@Model.Floor</td>
+    </tr>
+    <tr>
+        <th>Alan</th>
+        <td>@Model.Area</td>
+    </tr>
+
+
+
+
+</table>
+

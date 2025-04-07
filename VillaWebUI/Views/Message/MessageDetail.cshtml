@@ -1,0 +1,25 @@
+﻿@model ResultMessageDto
+@{
+    ViewData["Title"] = "MessageDetail";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table class="table table-striped">
+    <tr>
+        <th>Name:</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Email:</th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <th>Konu:</th>
+        <td>@Model.Subject</td>
+    </tr>
+    <tr>
+        <th>Mesaj İçeriği:</th>
+        <td>@Model.MessageContent</td>
+    </tr>
+</table>
+

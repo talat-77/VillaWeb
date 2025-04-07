@@ -1,0 +1,23 @@
+﻿@model CreateMessageDto
+@{
+    ViewData["Title"] = "Mesaj Oluştur";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>İsim</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Email</label>
+    <input type="text" asp-for="Email" class="form-control" />
+    <br />
+    <label>Konu</label>
+    <input type="text" asp-for="Subject" class="form-control" />
+    <br />
+    <label>Mesaj-Metni</label>
+    <input type="text" asp-for="MessageContent" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-dark">Kaydet</button>
+</form>
+
